@@ -128,22 +128,23 @@ MainActivity的代码和布局代码以及欢迎界面的代码就不往上贴�
 8）利用`getViewTreeObserver` 添加全部布局监听（`addGlobalLayoutListener`），获取两点之间的距离。  
 9）利用`ViewPager` 设置监听页面改变，动态的获取红点移动的距离，以及设置`btn_start_main` 显示状态。  
 10）监听`btn_start_main` 点击事件，首先存放进入过主页面的状态，然后在进入主页面，最后关闭当前活动。  
-####代码如下：
-	public class GuideActivity extends AppCompatActivity {
-	    private ViewPager viewPager;
-	    private Button btn_start_main;
-	    private ImageView red_point;
-	    private LinearLayout ll_point_group;
-	    List<ImageView> imageViews;
-	    private int[] ids;
-	    //两点之间的距离
-	    private int pointDelta;
-	    //单位转换好的值
-	    private int pointSize;
-	    @Override
-	    protected void onCreate(Bundle savedInstanceState) {
-	        super.onCreate(savedInstanceState);
-	        setContentView(R.layout.activity_guide);
+代码如下：
+
+	public class GuideActivity extends AppCompatActivity {  
+	    private ViewPager viewPager;  
+	    private Button btn_start_main;  
+	    private ImageView red_point;  
+	    private LinearLayout ll_point_group;  
+	    List<ImageView> imageViews;  
+	    private int[] ids;  
+	    //两点之间的距离  
+	    private int pointDelta;  
+	    //单位转换好的值  
+	    private int pointSize;  
+	    @Override  
+	    protected void onCreate(Bundle savedInstanceState) {  
+	        super.onCreate(savedInstanceState);  
+	        setContentView(R.layout.activity_guide);  
 	
 	        viewPager = (ViewPager) findViewById(R.id.view_guide);
 	        btn_start_main = (Button) findViewById(R.id.btn_start_main);
